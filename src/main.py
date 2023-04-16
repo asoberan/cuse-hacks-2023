@@ -1,38 +1,70 @@
-from urllib import parse
+from folium.plugins import FastMarkerCluster
 import folium as f
 import pandas as pd
-import requests
 import os.path
-import pprint
+import webbrowser
 
 DATASETS_PATH = "datasets/"
+CNY = (43.0481221, -76.1474244)
 
-pantry_data = pd.read_csv(os.path.join(DATASETS_PATH, "OnCo_Food_Pantries_2015.csv"),
+PANTRY_DATA = pd.read_csv(os.path.join(DATASETS_PATH,
+                                       "2019/"
+                                       "onondaga-food-resources.csv"),
                           encoding = 'unicode_escape',
                           engine = 'python')
 
-def parse_addresses(pantry_data):
-    street = pantry_data["Street"].values.tolist()
-    city = pantry_data["City"].values.tolist()
-    zipcode = pantry_data["Zip"].values.tolist()
+def fast_marker_cluster(data):
+    callback = ('''
 
-    addresses = map(lambda s, c, z: [s, c, z], street, city, zipcode)          
+       function(row) {
+            var colors = {
+                "Food Pantry": "yellow",
+                "Community Garden": "green",
+                "Grocery Store": "blue"
+            };
 
-    return list(addresses)
+            var marker = L.marker(new L.LatLng(row[0], row[1]), {color: "red"});
 
-def geocode(address):
-    street, city, zipcode = address
-    nominatim_uri = "https://nominatim.openstreetmap.org/search"
-    query = {
-        "street": street,
-        "city": city,
-        "postalcode": zipcode,
-        "format": "json"
-    };
-    coords = requests.get(nominatim_uri, params=query)
-    coords_json = coords.json()
-    lat, lon = coords_json[0]["lat"], coords_json[0]["lon"]
-    return lat, lon 
+            var icon = L.AwesomeMarkers.icon({
+                icon: 'info-sign',
+                markerColor: colors[row[2]],
+                prefix: 'glyphicon',
+                extraClasses: 'fa-rotate-0'});
 
-sample_address = parse_addresses(pantry_data)[1]
-print(geocode(sample_address))
+            marker.setIcon(icon);
+            var popupName = "<p class='popup-name'>" + row[3] + "</p>";
+            var popupAddress = "<p class='popup-address'>" +
+                                row[4] + ", " +
+                                row[5] + " " +
+                                row[6] + "</p>";
+            var popupDirs = "<a target='_blank' href='https://www.google.com/maps?saddr=My+Location&daddr=" + row[0] + "," + row[1] + "'>Directions</a>";
+            var popupHours = "<p class='popup-hours-title'><strong>Hours:</strong></p><p class='popup-hours'>" + row[7] + "</p>";
+            marker.bindPopup(popupName + popupAddress + popupDirs + popupHours);
+            marker.bindTooltip(row[3]);
+            return marker
+       };
+
+    ''')
+
+    marker_data = data[["Lat", "Lon", "Type", "Name", "Street", "City", "Zip", "Hours"]].values.tolist()
+
+    fast_marker_cluster = FastMarkerCluster(marker_data,
+                                            callback=callback,
+                                            disable_clustering_at_zoom=14,
+                                            spiderfyOnMaxZoom=False)
+
+    return fast_marker_cluster
+
+def create_map():
+    fol_map = f.Map(location=CNY, max_zoom=19, zoom_start=12)
+    fol_map.add_child(fast_marker_cluster(PANTRY_DATA))
+
+    return fol_map
+
+def main():
+    fol_map = create_map()
+    fol_map.save("map.html")
+    webbrowser.open("map.html")
+
+if __name__ == "__main__":
+    main()
