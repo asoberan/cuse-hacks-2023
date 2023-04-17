@@ -63,8 +63,8 @@ def create_map():
 
 def main():
     fol_map = create_map()
-    fol_map.save("map/index.html")
-    webbrowser.open("map/index.html")
+    fol_map.save("templates/map/index.html")
+    webbrowser.open("templates/map/index.html")
 
 if __name__ == "__main__":
     main()
