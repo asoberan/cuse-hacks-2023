@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="legend.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.86666667"
+     inkscape:cx="199.61538"
+     inkscape:cy="310.38462"
+     inkscape:window-width="1280"
+     inkscape:window-height="771"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="75.253349"
+       y="48.91468"
+       width="267.14941"
+       height="88.422691"
+       id="rect3130" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#fffea6;fill-opacity:1;stroke:#000000;stroke-width:5.16288;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect234"
+       width="153.58713"
+       height="153.58713"
+       x="2.5814373"
+       y="2.5814373"
+       ry="0.53156871"
+       inkscape:label="rect234" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.6389px;fill:#fffea6;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+       x="44.150116"
+       y="25.601439"
+       id="text3136"><tspan
+         sodipodi:role="line"
+         id="tspan3134"
+         style="font-weight:bold;font-size:17.6389px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
+         x="44.150116"
+         y="25.601439">LEGEND</tspan></text>
+    <g
+       id="g8447"
+       transform="translate(0,2.0340903)">
+      <text
+         xml:space="preserve"
+         style="font-size:14.1111px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         x="41.241295"
+         y="45.753475"
+         id="text3339"><tspan
+           sodipodi:role="line"
+           id="tspan3337"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="41.241295"
+           y="45.753475">Food</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="41.241295"
+           y="63.392349"
+           id="tspan8441">Pantry:</tspan></text>
+      <rect
+         style="fill:#d64020;fill-opacity:1;stroke:none;stroke-width:0.345799;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3401"
+         width="31.75"
+         height="23.8125"
+         x="107.92725"
+         y="38.997776"
+         ry="0.75773728" />
+    </g>
+    <g
+       id="g8453"
+       transform="translate(0,3.1178673)">
+      <text
+         xml:space="preserve"
+         style="font-size:14.1111px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         x="45.750664"
+         y="87.196976"
+         id="text3343"><tspan
+           sodipodi:role="line"
+           id="tspan3341"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="45.750664"
+           y="87.196976">Grocery</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="45.750664"
+           y="104.83585"
+           id="tspan8439">Store:</tspan></text>
+      <rect
+         style="fill:#35a1d1;fill-opacity:1;stroke:none;stroke-width:0.323408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3559"
+         width="31.75"
+         height="23.8125"
+         x="106.44469"
+         y="79.100723"
+         ry="0.73329407" />
+    </g>
+    <g
+       id="g8459">
+      <text
+         xml:space="preserve"
+         style="font-size:14.1111px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         x="53.780296"
+         y="129.83646"
+         id="text3347"><tspan
+           sodipodi:role="line"
+           id="tspan3345"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="53.7803"
+           y="129.83646">Community</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:14.1111px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="53.780296"
+           y="147.47534"
+           id="tspan8437">Garden:</tspan></text>
+      <rect
+         style="fill:#72b026;fill-opacity:1;stroke:none;stroke-width:0.376726;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5947"
+         width="31.75"
+         height="23.8125"
+         x="110.96688"
+         y="121.64848"
+         ry="0.84193027" />
+    </g>
+  </g>
+</svg>

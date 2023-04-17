@@ -1,3 +1,4 @@
+import flask
 from flask import Flask
 
 app = Flask(__name__)
@@ -89,7 +90,7 @@ def homepage():
                 </div>
                 <h1>Food Resources in Syracuse</h1>
                 <p>Access food pantries, soup kitchens, and grocery stores near you!</p>
-                <button onclick="window.location.href='/MapDatabase'">Find Resources Near You</button>
+                <button onclick="window.location.href='/map'">Find Resources Near You</button>
                 <p>Find nutritional advice for every life stage!</p>
                 <button onclick="window.location.href='https://www.myplate.gov/life-stages'">Go to MyPlate.gov</button>
             </body>
@@ -98,29 +99,11 @@ def homepage():
     return html_content
 
 
-@app.route("/MapDatabase")
-def Map_Database():
-    html_content = '''
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <style>
-                    body {
-                        font-family: gill sans,sans-serif;
-                        font-size: 30px;
-                        text-align: center;
-                        background-color: #fffae6;
-                    }
-                </style>
-            </head>
-            <body>
-                <h1>Food Resources in Syracuse</h1>
-            </body>
-        </html>
-    '''
-    return html_content
+@app.route("/map")
+def map_database():
+    return flask.render_template("map/index.html")
 
-@app.route("/AboutUs")
+@app.route("/about-us")
 def about():
     html_content = '''
         <!DOCTYPE html>
